@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ASN.1 Parser - BlueCrypt</title>
+  <style>
+    textarea {
+      width: 42em;
+      height: 10em;
+    }
+  </style>
+</head>
+<body>
+  <h1>BlueCrypt ASN.1 Parser</h1>
+
+  <textarea class="js-input" placeholder="Paste a PEM here">-----BEGIN PUBLIC KEY-----
+MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIT1SWLxsacPiE5Z16jkopAn8/+85
+rMjgyCokrnjDft6Y/YnA4A50yZe7CnFsqeDcpnPbubP6cpYiVcnevNIYyg==
+-----END PUBLIC KEY-----</textarea>
+
+  <pre><code class="js-hex"> </code></pre>
+
+  <pre><code class="js-json"> </code></pre>
+
+  <script src="./asn1-parser.js"></script>
+  <script>
+    var $input = document.querySelector('.js-input');
+
+    function convert() {
+      console.log('change');
+      var pem = PEM.parseBlock(document.querySelector('.js-input').value);
+      var hex = Enc.bufToHex(pem.der);
+      console.log(hex);
+      document.querySelector('.js-hex').innerText = hex
+        .match(/.{2}/g).join(' ').match(/.{1,24}/g).join(' ').match(/.{1,50}/g).join('\n');
+      var json = ASN1.parse(pem.der);
+      document.querySelector('.js-json').innerText = JSON.stringify(json, ASN1._replacer, 2);
+    }
+
+    $input.addEventListener('keyup', convert);
+    convert();
+  </script>
+</body>
+</html>
