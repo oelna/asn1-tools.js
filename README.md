@@ -1,7 +1,7 @@
-# BlueCrypt ASN.1 Parser
+# Bluecrypt ASN.1 Parser
 
 An ASN.1 parser in less than 100 lines of Vanilla JavaScript,
-part of the BlueCrypt suite.
+part of the Bluecrypt suite.
 <br>
 <small>(< 150 with newlines and comments)</small>
 
@@ -32,7 +32,7 @@ part of the BlueCrypt suite.
 ```
 
 ```js
-'use strict";
+'use strict';
 
 var ASN1 = window.ASN1  // 62 lines
 var Enc = window.Enc    // 27 lines
@@ -92,5 +92,5 @@ to produce a small, focused file that does exactly what it needs to do.
 
 # Legal
 
-[BlueCrypt VanillaJS ASN.1 Parser](https://git.coolaj86.com/coolaj86/asn1-parser.js) |
+[Bluecrypt VanillaJS ASN.1 Parser](https://git.coolaj86.com/coolaj86/asn1-parser.js) |
 MPL-2.0

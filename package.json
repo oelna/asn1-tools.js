@@ -1,7 +1,7 @@
 {
   "name": "asn1-parser",
-  "version": "1.0.0",
-  "description": "An ASN.1 parser in less than 100 lines of Vanilla JavaScript, part of the BlueCrypt suite.",
+  "version": "1.0.1",
+  "description": "An ASN.1 parser in less than 100 lines of Vanilla JavaScript, part of the Bluecrypt suite.",
   "homepage": "https://git.coolaj86.com/coolaj86/asn1-parser.js",
   "main": "asn1-parser.js",
   "directories": {
