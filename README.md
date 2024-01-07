@@ -2,6 +2,8 @@
 
 I combined the two libraries into a single ESM. Hope I didn't break anything. Original code by @coolaj86
 
+An ASN.1 parser and packer in about 250 lines of vanilla Javascript, no dependencies.
+
 # Usage
 
 ```js
