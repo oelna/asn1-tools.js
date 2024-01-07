@@ -21,11 +21,12 @@ rMjgyCokrnjDft6Y/YnA4A50yZe7CnFsqeDcpnPbubP6cpYiVcnevNIYyg==
 
   <pre><code class="js-json"> </code></pre>
 
-  <script src="./asn1-parser.js"></script>
-  <script>
+  <script type="module">
+    import { ASN1, PEM, Enc } from './asn1-tools.js';
+    
     var $input = document.querySelector('.js-input');
 
-    function convert() {
+    function convert () {
       console.log('change');
       var pem = PEM.parseBlock(document.querySelector('.js-input').value);
       var hex = Enc.bufToHex(pem.der);
